@@ -42,7 +42,7 @@ var App = {
         if(ga != undefined) ga('send', 'event', 'su');
     },
     sudo: function(x) {
-        this.echo("\x90")
+        this.error("Segmentation fault!")
         if(ga != undefined) ga('send', 'event', 'sudo');
     },
     cat: function(x) {
