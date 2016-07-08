@@ -45,6 +45,10 @@ var App = {
         this.echo("\x90")
         if(ga != undefined) ga('send', 'event', 'sudo');
     },
+    cat: function(x) {
+        this.error("cat "+x+"?.....If only...)
+        if(ga != undefined) ga('send', 'event', 'cat');
+    },
     www: function() {
         this.echo("This page built with <a href='http://terminal.jcubic.pl/' target='_blank'>jQuery Terminal Emulator</a> plugin, and hosted by <a href='http://pages.github.com' target='_blank'>GitHub Pages<a/>.", {raw:true});
         if(ga != undefined) ga('send', 'event', 'www');
@@ -94,7 +98,7 @@ jQuery(document).ready(function($) {
 		"Starting udev:...................................( OK )\n"+
 		"Mount devpts:....................................( OK )\n"+
 		"Configure kernel options.........................( OK )\n"+
-		"Setting clock: "+Date.now()+"...................( OK )\n"+
+		"Setting clock: "+Date.now()+".....................( OK )\n"+
 		"SYSTEM BOOT COMPLETE.............................( OK )\n\n\n"+
 		"~MOTD~\n"+
 		" ▄ .▄▄• ▄▌ ▐ ▄ ▄▄▄▄▄▄▄▄ .▄▄▄       ▄▄ • ▄▄▄  ▄▄▄ . ▄▄ •  ▄▄▄· ▄▄▌  \n"+
