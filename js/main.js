@@ -91,15 +91,17 @@ jQuery(document).ready(function($) {
      
            $('body').terminal(App, {
          greetings: "[[b;#44D544;]"+
-		"Starting udev:                                 [ OK &rsqb;\n"+
-		"Mount devpts:                                  [ OK &rsqb;\n"+
-		"Configure kernel options                       [ OK &rsqb;\n"+
-		"Setting clock: "+Date.now()+"                  [ OK &rsqb;\n\n"+
-		"SYSTEM BOOT COMPLETE                           [ OK &rsqb;\n\n\n"+
-		"Quick Commands"+
+		"Starting udev:...................................( OK )\n"+
+		"Mount devpts:....................................( OK )\n"+
+		"Configure kernel options.........................( OK )\n"+
+		"Setting clock: "+Date.now()+"................( OK )\n\n"+
+		"SYSTEM BOOT COMPLETE.............................( OK )\n\n\n"+
+		"~MOTD~\n"+
+		"Welcome to Hunter Gregal's personal website!\n\n"+
+		"Quick Commands\n"+
 		"\techo          env          help\n"+
-		"\tid            ls           whoami]\n\n"+
-		"root&#64;huntergregal&#46;com:~# env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=SecurityResearcher;Student\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]",
+		"\tid           ls           whoami]\n\n"+
+		"[b;#44D544;]root]&#64;huntergregal&#46;com:~# env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=SecurityResearcher;Student\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]\n",
                 prompt: function(p){
             var path = '~'
             p(e + ":" + path + "# ");
