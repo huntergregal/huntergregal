@@ -20,13 +20,13 @@ var App = {
         if(ga != undefined) ga('send', 'event', 'ls');
     },
     whoami: function() {
-        this.echo("\nroot"); 
+        this.echo("root"); 
 
         if(ga != undefined) ga('send', 'event', 'whoami');
     },
        blog: function() {
         if(ga != undefined) ga('send', 'event', 'blog');
-        this.echo("Loading the blog... Wait a sec ... \n")
+        this.echo("Loading the blog... Wait a sec ...")
         setTimeout(function(){ document.location.href = 'http://blog.huntergregal.com'; }, 1000);
     },
         publicPGPkey: function() {
@@ -34,7 +34,7 @@ var App = {
         if(ga != undefined) ga('send', 'event', 'publicPGPkey');
     },
         donate: function() {
-        this.echo("If you're feeling generous: [[b;#44D544;]12TT6m7yQHA3Ax272vybYTL6dEdcANZxwv] \n ")
+        this.echo("\nIf you're feeling generous: [[b;#44D544;]12TT6m7yQHA3Ax272vybYTL6dEdcANZxwv] \n ")
         if(ga != undefined) ga('send', 'event', 'tip');
     },
         su: function(user) {
@@ -59,7 +59,7 @@ var App = {
         if(ga != undefined) ga('send', 'event', 'shutdown');
     },
     env: function() {
-        this.echo("[[b;#44D544;]NAME=HunterGregal\nTITLE=SecurityResearcher;Student\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal]");
+        this.echo("[[b;#44D544;]NAME=HunterGregal\nTITLE=SecurityResearcher;Student\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]");
         if(ga != undefined) ga('send', 'event', 'env');
     },
     cv: function() {
@@ -67,6 +67,16 @@ var App = {
         setTimeout(function(){ document.location.href = 'http://huntergregal.com/HunterGregalResume.pdf'; }, 1000);
         if(ga != undefined) ga('send', 'event', 'env');
     },
+    oldsite: function() {
+        this.echo("Loading my old site...");
+        setTimeout(function(){ document.location.href = 'http://huntergregal.com/oldsite'; }, 1000);
+        if(ga != undefined) ga('send', 'event', 'env');
+    },
+    github: function() {
+        this.echo("Loading my github...");
+        setTimeout(function(){ document.location.href = 'https://github.com/huntergregal'; }, 1000);
+        if(ga != undefined) ga('send', 'event', 'env');
+    }
 }
 
 window.mobileAndTabletcheck = function() {
@@ -80,7 +90,7 @@ jQuery(document).ready(function($) {
      
      
            $('body').terminal(App, {
-         greetings: "[[b;#44D544;].................SYSTEM BOOT COMPLETE\n\n\nQuick Commands\n\techo\tenv\thelp\n\tid\t   ls\twhoami]\nroot&#64;huntergregal&#46;com:~# env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=SecurityResearcher;Student\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal]",
+         greetings: "[[b;#44D544;]Starting udev:\t\t[ OK ]\nMount devpts:\t\t[ OK ]\nConfigure kernel options\t\t[ OK ]\nSetting clock: "+Date.now()+"\t\t[ OK ]\nSYSTEM BOOT COMPLETE\t\t[ OK ]\n\n\nQuick Commands\n\techo\tenv\thelp\n\tid\t   ls\twhoami]\nroot&#64;huntergregal&#46;com:~# env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=SecurityResearcher;Student\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]",
                 prompt: function(p){
             var path = '~'
             p(e + ":" + path + "# ");
@@ -135,17 +145,18 @@ consoleObj.echo("-----BEGIN PGP PUBLIC KEY BLOCK-----\n"+
 function showHelp(consoleObj)
 {
         consoleObj.echo("Available commands:");
-        consoleObj.echo("\t[[b;#44D544;]blog]     #Visit my blog");
-        consoleObj.echo("\t[[b;#44D544;]clear]       clear the console"); 
-        consoleObj.echo("\t[[b;#44D544;]donate]      #Support my efforts (BTC)");
-        consoleObj.echo("\t[[b;#44D544;]echo]");
-        consoleObj.echo("\t[[b;#44D544;]env]      #Display environment variables");
-        consoleObj.echo("\t[[b;#44D544;]help]      #This help message");
-        consoleObj.echo("\t[[b;#44D544;]id]");
-        consoleObj.echo("\t[[b;#44D544;]ls]");
+        consoleObj.echo("\t[[b;#44D544;]blog]              #Visit my blog");
+        consoleObj.echo("\t[[b;#44D544;]clear]             #Clear the console"); 
+        consoleObj.echo("\t[[b;#44D544;]donate]            #Support my efforts (BTC)");
+        consoleObj.echo("\t[[b;#44D544;]echo]              #Echo...");
+        consoleObj.echo("\t[[b;#44D544;]env]               #Display environment variables");
+        consoleObj.echo("\t[[b;#44D544;]github]            #Visit my github");
+        consoleObj.echo("\t[[b;#44D544;]help]              #This help message");
+        consoleObj.echo("\t[[b;#44D544;]id]                #Id...");
+        consoleObj.echo("\t[[b;#44D544;]ls]                #Ls...");
+        consoleObj.echo("\t[[b;#44D544;]oldsite]           #Visit my old website");
         consoleObj.echo("\t[[b;#44D544;]publicPGPkey]      #Display my public PGP key");
-        consoleObj.echo("\t[[b;#44D544;]shutdown]");
-        consoleObj.echo("\t[[b;#44D544;]whoami]");
-        consoleObj.echo("\t[[b;#44D544;]www]      #Display information about this site");
-        consoleObj.echo("\t[[b;#44D544;]projects]      list some projects i've been working on");
+        consoleObj.echo("\t[[b;#44D544;]shutdown]          #Shutdown system");
+        consoleObj.echo("\t[[b;#44D544;]whoami]            #Whomai...");
+        consoleObj.echo("\t[[b;#44D544;]www]               #Display information about this site");
 }
