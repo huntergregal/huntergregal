@@ -167,6 +167,7 @@ function showHelp(consoleObj)
         consoleObj.echo("Available commands:");
         consoleObj.echo("\t[[b;#44D544;]blog]              #Visit my blog");
         consoleObj.echo("\t[[b;#44D544;]clear]             #Clear the console"); 
+        consoleObj.echo("\t[[b;#44D544;]cv]                #Checkout my resume"); 
         consoleObj.echo("\t[[b;#44D544;]donate]            #Support my efforts (BTC)");
         consoleObj.echo("\t[[b;#44D544;]echo]              #Echo...");
         consoleObj.echo("\t[[b;#44D544;]env]               #Display environment variables");
