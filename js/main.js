@@ -46,7 +46,7 @@ var App = {
         if(ga != undefined) ga('send', 'event', 'sudo');
     },
     cat: function(x) {
-        this.error("cat "+x+"?.....If only...)
+        this.error("cat "+x+"?.....If only...");
         if(ga != undefined) ga('send', 'event', 'cat');
     },
     www: function() {
