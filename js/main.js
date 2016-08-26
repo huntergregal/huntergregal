@@ -12,10 +12,14 @@ var App = {
     },
 
         ls: function() {
+            this.echo('autoexec.cfg');
             this.echo('CLASSIFIED.tar.gz');
             this.echo('hgregal_Private.pgp');
             this.echo('huntergregal.pem');
+            this.echo('HashCrackingReport.pdf');
+            this.echo('HunterGregalResume.pdf');
             this.echo('passwords.txt');
+            this.echo('Python_Encryptor.py');
             this.echo('theSecretToLife.txt');
         if(ga != undefined) ga('send', 'event', 'ls');
     },
