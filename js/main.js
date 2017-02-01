@@ -135,7 +135,6 @@ function showPGP(consoleObj)
         this.echo("Loading PGP key...");
         setTimeout(function(){ document.location.href = 'http://huntergregal.com/publicPGPkey'; }, 1000);
         if(ga != undefined) ga('send', 'event', 'env');
-    }
 }
 
 function showHelp(consoleObj)
