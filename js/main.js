@@ -87,7 +87,7 @@ var App = {
     },
     publicPGPkey: function() {
         this.echo("Loading PGP key...");
-        setTimeout(function(){ document.location.href = 'http://huntergregal.com/publicPGPkey'; }, 1000);
+        setTimeout(function(){ document.location.href = 'http://huntergregal.com/publicPGPkey.txt'; }, 1000);
         if(ga != undefined) ga('send', 'event', 'env');
     }
 }
