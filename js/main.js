@@ -133,36 +133,32 @@ jQuery(document).ready(function($) {
 function showPGP(consoleObj)
 {
 consoleObj.echo("-----BEGIN PGP PUBLIC KEY BLOCK-----\n"+
-"Version: Mailvelope v1.4.0\n"+
-"Comment: https://www.mailvelope.com\n\n"+
-"xsBNBFbN2ucBCADNVt1zQZfrrRCUlsy6pS8sTjH1UGMpmmjw0ZefGYxEe703\n"+
-"tddAnbauML4km0Z8VbPLKBfSjP0grG/vx78gUnWpv3gb+/usFJ7Zuuy0M/7T\n"+
-"1Mvmmu652AB96GB6iRqJUNgPllLSPhsVOOTtxlgXy5mtaLVZ4aKQq+o296pD\n"+
-"g44yg7tZfP7fencDZY73Cw7+73nBuSkTjYcUZfBNHxWVv4tnXEtsQM8UKJ3L\n"+
-"scGrQek1v0bxgDNQOydnFs7PWXXPGLpG+HATdWvjLljRpQaxsuUPiMD8rCqr\n"+
-"DtTOIrcLB7+kclJnRwz8KZBKivRcIdwqxm5j7mvTggOSN9vScHaYFugNABEB\n"+
-"AAHNJkh1bnRlciBHcmVnYWwgPGh1bnRlcmdyZWdhbEBnbWFpbC5jb20+wsB/\n"+
-"BBMBCAApAhsDBwsJCAcDAgEGFQgCCQoLBBYCAwECHgECF4AFAlbN26EFCQPD\n"+
-"vykACgkQnGlENXwbtlMyvgf/XiWT8/dpo9MSh+YSgcGrEhIUrqE2b39tsxos\n"+
-"QjiB45u3fzp6cRXpj4DC0/vFwgisWYCvbHpQq/S+OPqXPRJByM/jNrgPYqXi\n"+
-"0piFbXo7lZ4bgOfAxFyCv4HQX2wttLHc6qlPmsZN80co7YYLiI+hDbXoPEFc\n"+
-"x3X3jqyMv/5TPi3Y7eUmjQUZ3o0s9A4sRm2RvGecipdJTMWGyoqtTX9Y48vW\n"+
-"LYYAE8a0NeDmiRp/UuiWbgTiMiIu6SO8TbKEJ0BLiPWNElZzsPWHc+UesWzd\n"+
-"VOyzplKRDxbICSEjlFEAS7GSwD+j7PWX05Or6QsZQ7wzxDleROLDC51rauYP\n"+
-"1y7aTs7ATQRWzdrnAQgA5THBboxJsXP5e6JuErgh9TR+hIo7d8VjBevbsWaf\n"+
-"REENpVLhfTty5A7ojTzzDOBvIYBP24dDTK4N0US1hf2g+tIUaGDTDXhi72tt\n"+
-"RVGU8D4h7cvoJEIGeF03LwdmkM0IS+L5euTQBwoipfZgb5n4L4D1FsCvNlPt\n"+
-"GjZQa7w2TEtpPKUeRN7QLmOUQGV6ElyO2gDs1RO7qUXPYBpjU8R55NcNTctu\n"+
-"Z+OeIks6KbAcbKJXyXyi8xpcWw0Bhc5JXN9FgayHePGJkNktTnBWN1hUUdmO\n"+
-"LcTh1WwSS0MxDDfoTuWR2zCBWgQjbr0xvLs5ty2yOd6rU7vLfoxm47NFKlDs\n"+
-"cwARAQABwsBfBBgBCAAJBQJWzdrnAhsMAAoJEJxpRDV8G7ZT5LYIAImawwDY\n"+
-"06pdINFptqjylYsJidz+xu6JO+d2cD82/pqYkrrwFeHd73CG4xO516du89nG\n"+
-"sV7V66zRpjvNuVAra0knJaD76pPennvzw13lwoJW1FSCVngBgEwyx99KSb2j\n"+
-"QGgj2MT2LUcR49/Kkv8u/U+BDVCzI9Z77V0LG6cmfLHO5/DpO55YPOqrxZCB\n"+
-"Ttskm1XOiLgOvEvbN9SDy5zMATfsD2/NsuOdfwWN1FQBKqeujUEHoRSIxrbt\n"+
-"OehzF+/JABEUvG9knL+IRi2jYSj/dycAjp+EF6wpBUmIc/sOmFLmnElcev69\n"+
-"5o9eENd7DZX5iHT0DvryC6ooCA6/umPfD0k=\n"+
-"=bN5F\n"+
+"Version: SKS 1.1.5\n"+
+"Comment: Hostname: pgp.mit.edu\n\n"+
+"mQENBFbN2ucBCADNVt1zQZfrrRCUlsy6pS8sTjH1UGMpmmjw0ZefGYxEe703tddAnbauML4k\n"+
+"m0Z8VbPLKBfSjP0grG/vx78gUnWpv3gb+/usFJ7Zuuy0M/7T1Mvmmu652AB96GB6iRqJUNgP\n"+
+"llLSPhsVOOTtxlgXy5mtaLVZ4aKQq+o296pDg44yg7tZfP7fencDZY73Cw7+73nBuSkTjYcU\n"+
+"ZfBNHxWVv4tnXEtsQM8UKJ3LscGrQek1v0bxgDNQOydnFs7PWXXPGLpG+HATdWvjLljRpQax\n"+
+"suUPiMD8rCqrDtTOIrcLB7+kclJnRwz8KZBKivRcIdwqxm5j7mvTggOSN9vScHaYFugNABEB\n"+
+"AAG0Jkh1bnRlciBHcmVnYWwgPGh1bnRlcmdyZWdhbEBnbWFpbC5jb20+iQE/BBMBCAApAhsD\n"+
+"BwsJCAcDAgEGFQgCCQoLBBYCAwECHgECF4AFAlbN26EFCQPDvykACgkQnGlENXwbtlMyvgf/\n"+
+"XiWT8/dpo9MSh+YSgcGrEhIUrqE2b39tsxosQjiB45u3fzp6cRXpj4DC0/vFwgisWYCvbHpQ\n"+
+"q/S+OPqXPRJByM/jNrgPYqXi0piFbXo7lZ4bgOfAxFyCv4HQX2wttLHc6qlPmsZN80co7YYL\n"+
+"iI+hDbXoPEFcx3X3jqyMv/5TPi3Y7eUmjQUZ3o0s9A4sRm2RvGecipdJTMWGyoqtTX9Y48vW\n"+
+"LYYAE8a0NeDmiRp/UuiWbgTiMiIu6SO8TbKEJ0BLiPWNElZzsPWHc+UesWzdVOyzplKRDxbI\n"+
+"CSEjlFEAS7GSwD+j7PWX05Or6QsZQ7wzxDleROLDC51rauYP1y7aTrkBDQRWzdrnAQgA5THB\n"+
+"boxJsXP5e6JuErgh9TR+hIo7d8VjBevbsWafREENpVLhfTty5A7ojTzzDOBvIYBP24dDTK4N\n"+
+"0US1hf2g+tIUaGDTDXhi72ttRVGU8D4h7cvoJEIGeF03LwdmkM0IS+L5euTQBwoipfZgb5n4\n"+
+"L4D1FsCvNlPtGjZQa7w2TEtpPKUeRN7QLmOUQGV6ElyO2gDs1RO7qUXPYBpjU8R55NcNTctu\n"+
+"Z+OeIks6KbAcbKJXyXyi8xpcWw0Bhc5JXN9FgayHePGJkNktTnBWN1hUUdmOLcTh1WwSS0Mx\n"+
+"DDfoTuWR2zCBWgQjbr0xvLs5ty2yOd6rU7vLfoxm47NFKlDscwARAQABiQEfBBgBCAAJBQJW\n"+
+"zdrnAhsMAAoJEJxpRDV8G7ZT5LYIAImawwDY06pdINFptqjylYsJidz+xu6JO+d2cD82/pqY\n"+
+"krrwFeHd73CG4xO516du89nGsV7V66zRpjvNuVAra0knJaD76pPennvzw13lwoJW1FSCVngB\n"+
+"gEwyx99KSb2jQGgj2MT2LUcR49/Kkv8u/U+BDVCzI9Z77V0LG6cmfLHO5/DpO55YPOqrxZCB\n"+
+"Ttskm1XOiLgOvEvbN9SDy5zMATfsD2/NsuOdfwWN1FQBKqeujUEHoRSIxrbtOehzF+/JABEU\n"+
+"vG9knL+IRi2jYSj/dycAjp+EF6wpBUmIc/sOmFLmnElcev695o9eENd7DZX5iHT0DvryC6oo\n"+
+"CA6/umPfD0k=\n"+
+"=dcqP\n"+
 "-----END PGP PUBLIC KEY BLOCK-----");
 }
 
