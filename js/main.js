@@ -84,7 +84,7 @@ var App = {
         this.echo("Loading my github...");
         setTimeout(function(){ document.location.href = 'https://github.com/huntergregal'; }, 1000);
         if(ga != undefined) ga('send', 'event', 'env');
-    }
+    },
     publicPGPkey: function() {
         this.echo("Loading PGP key...");
         setTimeout(function(){ document.location.href = 'http://huntergregal.com/publicPGPkey'; }, 1000);
