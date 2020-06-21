@@ -1,4 +1,4 @@
-var e = "[[b;#44D544;]root]&#64;huntergregal&#46;com";
+var e = "[[b;#44D544;]root]@huntergregal.com";
 var App = {
     echo: function(text) {
         this.echo(text);
@@ -38,7 +38,10 @@ var App = {
         if(ga != undefined) ga('send', 'event', 'publicPGPkey');
     },
         donate: function() {
-        this.echo("\nIf you're feeling generous: [[b;#44D544;]12TT6m7yQHA3Ax272vybYTL6dEdcANZxwv] \n ")
+        this.echo("\nBitcoin (BTC) - 1FYntt7MQegqMynM398X3F5DRtusBCdAtr\n");
+        this.echo("Ethereum (ETH) - 0x97ae5174f237c2d244d231469ca46ce221269a9c\n");
+        this.echo("Enjin (ENJ) - 0x97ae5174f237c2d244d231469ca46ce221269a9c\n");
+        this.echo("Monero (XMR) - 89mA6iATQM8BabgHZqjHKyNvZwmviLodmKD33zohcyHMJSv33j1AQpwCPuW1nkbYbw3jAQ7RpqXy7ZmvZek5J81UErLWc98\n");
         if(ga != undefined) ga('send', 'event', 'tip');
     },
         su: function(user) {
@@ -118,8 +121,8 @@ jQuery(document).ready(function($) {
 		"Welcome to Hunter Gregal's personal website!\n\n"+
 		"Quick Commands\n"+
 		"\techo          env          help\n"+
-		"\tid           ls           whoami]\n\n"+
-		"[[b;#44D544;]root]&#64;huntergregal&#46;com:~# env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=SecurityResearcher;Student\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]",
+		"\tid           ls           whoami\n\n"+
+		"root]@huntergregal.com:~# env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=SecurityResearcher;Student\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]",
                 prompt: function(p){
             var path = '~'
             p(e + ":" + path + "# ");
