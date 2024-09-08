@@ -161,7 +161,7 @@ jQuery(document).ready(function ($) {
             "Quick Commands\n" +
             "\techo          env          help\n" +
             "\tid           ls           whoami\n\n") +
-            e + ": " + cyan("~") + yellow("$ ")); + "env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=VulnerabilityResearcher\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]",
+            e + ": " + cyan("~") + yellow("$ ") + "env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=VulnerabilityResearcher\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]",
         prompt: function (p) {
             var path = cyan('~');
             p(e + ":" + path + yellow("$ "));
