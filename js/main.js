@@ -1,11 +1,11 @@
 function hexcolor(code, text) {
-    return "[[b;" + code + "]" + text + "]";
+    return "[[b;" + code + ";]" + text + "]";
 }
 function white(text) {
     return hexcolor("#ffffff", text);
 }
 function yellow(text) {
-    return hexcolor("##f8f808", text);
+    return hexcolor("#f8f808", text);
 }
 function darkRed(text) {
     return hexcolor("#c22626", text);
@@ -23,10 +23,15 @@ function red(text) {
     return hexcolor("#ff0000", text);
 }
 
-var e = green("root")+"@"+blue("huntergregal.com");
+var e = darkRed("root")+white("@")+blue("huntergregal.com");
 var App = {
     echo: function (text) {
-        this.echo(text);
+        if (text.includes("AAAA")) {
+            this.error("Segmentation fault!")
+            this.error("flag{W0t_u_Th1nK_U_C@n_H@CK?}");
+        } else {
+            this.echo(text);
+        }
 
         if (ga != undefined) ga('send', 'event', 'echo', 'text', text);
     },
@@ -38,7 +43,8 @@ var App = {
 
     ls: function () {
         this.echo('autoexec.cfg');
-        this.echo(blue('www'));
+        this.echo(blue('js'));
+        this.echo(blue('oldsite'));
         this.echo(red('CLASSIFIED.tar.gz'));
         this.echo('hgregal_Private.pgp');
         this.echo('huntergregal.pem');
@@ -78,7 +84,7 @@ var App = {
         if (ga != undefined) ga('send', 'event', 'sudo');
     },
     cat: function (x) {
-        this.error("cat " + x + "?.....If only...");
+        this.error("cat: " + x + ": Permission denied");
         if (ga != undefined) ga('send', 'event', 'cat');
     },
     www: function () {
@@ -94,7 +100,7 @@ var App = {
     shutdown: function () {
         this.error('SYSTEM HALT!');
         setTimeout(function () {
-            document.location.href = 'http://huntergregal.com';
+            document.location.href = 'https://huntergregal.com';
         }, 2500);
         if (ga != undefined) ga('send', 'event', 'shutdown');
     },
@@ -145,26 +151,25 @@ jQuery(document).ready(function ($) {
 
 
     $('body').terminal(App, {
-        greetings: green(
-            "Starting udev:...................................( OK )\n" +
+        greetings: yellow("Starting udev:...................................( OK )\n" +
             "Mount devpts:....................................( OK )\n" +
             "Configure kernel options.........................( OK )\n" +
             "Setting clock: " + Date.now() + ".....................( OK )\n" +
             "SYSTEM BOOT COMPLETE.............................( OK )\n\n\n" +
-            "~MOTD~\n" +
-            " ▄ .▄▄• ▄▌ ▐ ▄ ▄▄▄▄▄▄▄▄ .▄▄▄       ▄▄ • ▄▄▄  ▄▄▄ . ▄▄ •  ▄▄▄· ▄▄▌  \n" +
+            "~MOTD~\n") +
+            green(" ▄ .▄▄• ▄▌ ▐ ▄ ▄▄▄▄▄▄▄▄ .▄▄▄       ▄▄ • ▄▄▄  ▄▄▄ . ▄▄ •  ▄▄▄· ▄▄▌  \n" +
             "██▪▐██▪██▌•█▌▐█•██  ▀▄.▀·▀▄ █·    ▐█ ▀ ▪▀▄ █·▀▄.▀·▐█ ▀ ▪▐█ ▀█ ██•  \n" +
             "██▀▐██▌▐█▌▐█▐▐▌ ▐█.▪▐▀▀▪▄▐▀▀▄     ▄█ ▀█▄▐▀▀▄ ▐▀▀▪▄▄█ ▀█▄▄█▀▀█ ██▪  \n" +
             "██▌▐▀▐█▄█▌██▐█▌ ▐█▌·▐█▄▄▌▐█•█▌    ▐█▄▪▐█▐█•█▌▐█▄▄▌▐█▄▪▐█▐█ ▪▐▌▐█▌▐▌\n" +
-            "▀▀▀ · ▀▀▀ ▀▀ █▪ ▀▀▀  ▀▀▀ .▀  ▀    ·▀▀▀▀ .▀  ▀ ▀▀▀ ·▀▀▀▀  ▀  ▀ .▀▀▀\n" +
-            "Welcome to Hunter Gregal's personal website!\n\n" +
+            "▀▀▀ · ▀▀▀ ▀▀ █▪ ▀▀▀  ▀▀▀ .▀  ▀    ·▀▀▀▀ .▀  ▀ ▀▀▀ ·▀▀▀▀  ▀  ▀ .▀▀▀\n") +
+            yellow("Welcome to Hunter Gregal's personal website!\n\n" +
             "Quick Commands\n" +
             "\techo          env          help\n" +
             "\tid           ls           whoami\n\n") +
-            e + ": " + cyan("~") + yellow("$ ") + "env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=VulnerabilityResearcher\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]",
+            e + white(":") + cyan("/var/www") + yellow("$ ") + "env\n[[b;#44D544;]NAME=HunterGregal\nTITLE=VulnerabilityResearcher\nBLOG=http://blog.huntergregal.com\nGITHUB=https://github.com/huntergregal\nTWITTER=@huntergregal\n_=/usr/bin/env]",
         prompt: function (p) {
-            var path = cyan('~');
-            p(e + ":" + path + yellow("$ "));
+            var path = cyan('/var/www');
+            p(e + white(":") + path + yellow("$ "));
         },
         onBlur: function () {
             // prevent loosing focus
@@ -179,8 +184,8 @@ jQuery(document).ready(function ($) {
 
 function showHelp(consoleObj) {
     consoleObj.echo("Available commands:");
-    consoleObj.echo(green("\tblog") + "             #Visit my blog");
-    consoleObj.echo(green("\tclear") +"            #Clear the console");
+    consoleObj.echo(green("\tblog") + "              #Visit my blog");
+    consoleObj.echo(green("\tclear") +"             #Clear the console");
     consoleObj.echo(green("\tcv") +"                #Checkout my resume");
     consoleObj.echo(green("\tdonate") +"            #Support my efforts (BTC)");
     consoleObj.echo(green("\techo") +"              #Echo...");
